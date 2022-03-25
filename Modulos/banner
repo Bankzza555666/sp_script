@@ -1,0 +1,70 @@
+#!/bin/bash
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
+MYIP=$(wget -qO- icanhazip.com);
+clear
+echo -e ""
+echo -e "       **************************************"
+echo -e "               กรุณาทำตามขั้นตอน 1 หรือ 2"
+echo -e ""
+echo -e "          [1]    สร้างบัญชี VMESS"
+echo -e "          [2]    ลบบัญชี    VMESS"
+echo -e "          [3]    ตรวจสอบ VMESS"
+echo -e "          [4]    ต่ออายุ      VMESS"
+echo -e "          -------------------------------------"
+echo -e "          [5]    สร้างบัญชี VLESS"
+echo -e "          [6]    ลบบัญชี    VLESS"
+echo -e "          [7]    ตรวจสอบ VLESS"
+echo -e "          [8]    ต่ออายุ      VLESS"
+echo -e "          -------------------------------------"
+echo -e "          [9]    สร้างบัญชี VLESS"
+echo -e "          [10]   ลบบัญชี    VLESS"
+echo -e "          [11]   ตรวจสอบ VLESS"
+echo -e "          [12]   ต่ออายุ      VLESS"
+echo -e "          [x]    ออกจากเมนู"
+echo -e "          -------------------------------------"
+echo -e ""
+echo -e "       **************************************"
+echo -e ""
+read -p "         กรุณาเลือก [1,2 หรือ x เพื่อออก] :  " changeport
+echo -e ""
+echo -e "       **************************************"
+case $changeport in   
+                1)
+                clear
+                vr
+                ;;
+                2)
+                clear
+                vrd
+                ;;
+                3)
+                clear
+                vrc
+                ;;
+                4)
+                clear
+                vrr
+                ;;
+                5)
+                clear
+                vs
+                ;;
+                6)
+                clear
+                vsd
+                ;;
+                7)
+                clear
+                vrc
+                ;;
+                8)
+                clear
+                vsr
+                ;;
+                x)
+                clear
+                menu
+                ;;
+        esac
